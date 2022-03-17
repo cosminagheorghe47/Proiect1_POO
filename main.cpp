@@ -355,6 +355,8 @@ int main()
                 cout<<"7.Marcati o carte drept 'citita'."<<endl;
                 cout<<"8.Comparati doua carti."<<endl;
                 cout<<"9.Modificati pretul unei carti."<<endl;
+                cout<<"10.Adaugati informatii detinator biblioteca."<<endl;
+                cout<<"11.Initializati detinatorul drept cititor."<<endl;
                 cout<<"0.Iesire din biblioteca"<<endl;
             }
         }
