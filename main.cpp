@@ -51,16 +51,16 @@ persoana& persoana::operator=(persoana &p)
 }
 ostream& operator<<(ostream& out, persoana& p)
 {
-    out<<"nume autor "<<p.nume<<", "<<"varsta autor "<<p.varsta<<" ";
+    out<<"nume "<<p.nume<<", "<<"varsta "<<p.varsta<<" ";
 }
 istream &operator>>(istream&in, persoana&p)
 {
     char n[255];
     in.ignore();
-    cout<<"Nume autor secundar: ";
+    cout<<"Nume: ";
     in>>p.nume;
     in.get();
-    cout<<"Varsta autor secundar: ";
+    cout<<"Varsta: ";
     in>>p.varsta;
     cout<<endl;
     return in;
@@ -144,6 +144,7 @@ istream &operator>>(istream&in, carte&c)
     cout<<endl;
     cout<<"E deja citita? Apasati tasta 1 daca da si 0 daca nu. ";
     in>>c.citita;
+    cout<<"Date autor secundar:"<<endl;
     in>>c.autor2;
     return in;
 }
@@ -190,10 +191,12 @@ bool operator== (const carte &c1, const carte &c2)
 }
 int main()
 {
-    int n,i,vv;
+    int n,i,vv,N;
     carte *v;
     carte *temp;
     char* var;
+    persoana sef;
+    persoana *cititori;
     cout<<"Biblioteca personala!"<<endl;
     cout<<"1.Initializare Biblioteca."<<endl;
     cout<<"2.Adaugare carte noua la colectie."<<endl;
@@ -204,14 +207,16 @@ int main()
     cout<<"7.Marcati o carte drept 'citita'."<<endl;
     cout<<"8.Comparati doua carti."<<endl;
     cout<<"9.Modificati pretul unei carti."<<endl;
-    cout<<"10.Meniu."<<endl;
+    cout<<"10.Adaugati informatii detinator biblioteca."<<endl;
+    cout<<"11.Initializati detinatorul drept cititor."<<endl;
+    cout<<"12.Meniu."<<endl;
     cout<<"0.Iesire din biblioteca"<<endl;
     cout<<"Alegeti o actiune."<<endl;
     int alegere;
     cin>>alegere;
     while(alegere!=0)
     {
-        if(alegere>10)
+        if(alegere>12)
         {
             cout<<"Alegerea nu exista. Introduceti un alt numar.";
         }
@@ -330,6 +335,15 @@ int main()
                 v[x-1].setpret(nou);
             }
             if(alegere==10)
+            {
+                cin>>sef;
+            }
+            if(alegere==11)
+            {
+                persoana cititor(sef);
+                cout<<cititor<<endl;
+            }
+            if(alegere==12)
             {
                 cout<<"Biblioteca personala!"<<endl;
                 cout<<"1.Initializare Biblioteca."<<endl;
