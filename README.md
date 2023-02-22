@@ -1,5 +1,5 @@
 # Proiect1_POO
-Am realizat functionalitatile unei biblioteci utilizand programare orientata pe obiecte, mai exact: creearea bibliotecii, adaugarea unei carti, gasirea unei carti,stergerea si modificarea acesteia, afisarea tuturor cartilor din biblioteca.
+Am realizat functionalitatile unei biblioteci utilizand programare orientata pe obiecte, mai exact: creearea bibliotecii, adaugarea unei carti, gasirea unei carti,stergerea si modificarea acesteia, afisarea tuturor cartilor din biblioteca. De asemenea, se poate marca o carte ca fiind citita si se pot afisa cartile citite, dar se pot si compara ratingurile a doua carti.
 
 Tema 17. Clasa „carte”
 	-membri privati: denumire carte, autor principal, al doilea autor, numar de pagini, pret, rating (goodreads).
